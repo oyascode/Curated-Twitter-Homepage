@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 1em/1.5 'Roboto', sans-serif;
+}
+
+svg {
+    width: 50px;
+    fill:  rgb(29, 161, 242);
+}
+
+/* Showcase styling*/
+
+.showcase {
+    width: 100%;
+    margin-top: 2em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.showcase .user-option {
+   width: 80%;
+   max-width: 400px;
+}
+
+.showcase .user-option h1 {
+    font-size: 1.6rem;
+    margin-bottom: 2em;
+}
+
+.showcase .user-option p {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.showcase .user-option .long-btn {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.user-option .long-btn .signup-btn {
+    border: 1px solid rgb(29, 161, 242);
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    margin-bottom: 0.9em;
+    padding: 0.5em;
+    background:  rgb(29, 161, 242);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.user-option .long-btn .login-btn {
+    border: 1px solid rgb(29, 161, 242);
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    background: rgb(255, 255, 255);
+    color: rgb(29, 161, 242);
+    text-align: center;
+}
+
+.long-btn a, .short-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+/* Follow section*/
+
+.follow {
+    background:  rgba(29, 161, 242, 0.6);
+    background-attachment: fixed;
+    z-index: 3;
+    position: relative;
+    height: 230px;
+    width: 100%;
+    margin: 2em 0;
+    padding: 1em 0;
+}
+
+.follow:before {
+    content: "";
+    background: url("images/twitter1400.png");
+    background-repeat: no-repeat;
+    background-size: 180%;
+    background-position: left;
+    background-attachment: local;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -3;
+}
+
+.follow .flex {
+    width: 80%;
+    max-width: 400px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+}
+
+.follow .flex svg {
+    fill: #fff;
+    width: 30px;
+    margin-right: 1em;
+}
+
+/* Short buttons*/
+
+.short-btn {
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    margin: 1em auto;
+    justify-content: center;
+    
+}
+
+.short-btn .signup-btn {
+    flex: 1 auto;
+    margin-right: 1em;
+    background:  rgba(29, 161, 242, 0.75);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0.5em 4em;
+    border: 1px solid rgba(29, 161, 242, 0.75);
+    border-top-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
+
+.short-btn .login-btn {
+    flex: 1 auto;
+    background: #fff;
+    text-align: center;
+    color: rgba(29, 161, 242, 0.75);
+    padding: 0.5em 4em;
+    border: 1px solid rgba(29, 161, 242, 0.75);
+    border-top-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+}
+/*Bottom Nav*/
+nav.bottom-menu {
+    width: 95%;
+    margin: 0 auto;
+}
+.bottom-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.bottom-menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 0.8rem;
+    padding: 0.5em 0.5em;
+}
+
+@media(min-width: 799px) {
+
+    .showcase {
+        height: 90vh;
+    }
+    .showcase.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .follow {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .follow:before {
+        content: "";
+        background: url("images/twitter1400.png");
+        background-repeat: no-repeat;
+        background-size: 2100px, 5000px;
+        background-position: center;
+    }
+
+    .follow .trending {
+        margin: 2em;
+    }
+
+    .short-btn {
+        display: none;
+    }
+
+}
+
+

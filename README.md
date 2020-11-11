@@ -1,0 +1,1 @@
+The twitter official homepage was curated using ChromeDev tools inspection
